@@ -106,7 +106,11 @@ lines of code that cause the memory leak.
 
 ![find-leaks](images/find-leaks.png)
 
-### Analyze object shapes
+### Size Analysis
+
+Size analysis gives insights about the current size of either `Object`s or `shape`s.
+
+#### Analyze object shapes
 
 `memlab analyze shape`
 
@@ -120,7 +124,7 @@ For each `shape`, memlab provides information about the cumulated size as well a
 
 ![shape-sizes](images/shape-sizes-2.png)
 
-### get largest object in heap
+#### get largest object in heap
 
 `memlab analyze object-size`
 
@@ -132,7 +136,31 @@ a single `Array` with `24 MB` in size. It is referenced by a property called `lo
 
 ![object-sizes](images/object-sizes.png)
 
-### Analyze shapes with unbound growth
+#### String Analysis
+
+`memlab analyze string`
+
+The string analysis is especially useful to find duplicates in your memory. Memlab provides you information
+about the top duplicated strings in `count` and `size`.
+
+The following example reports indicate that not the most often repeated strings
+are accounting for biggest amount of memory.
+Instead, you see two strings repeated 10 times each are accounting for 24 MB of
+memory usage.
+
+Top duplicated strings in count
+
+![string-top-count](string-top-count.png)
+
+Top duplicated strings in size
+
+![string-top-size](string-top-size.png)
+
+### Growth Analysis
+
+Growth analysis gives insights about either `Object`s or `shape`s that grow over time.
+
+#### Analyze shapes with unbound growth
 
 `memlab analyze unbound-shape`
 

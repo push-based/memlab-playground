@@ -12,4 +12,4 @@ Run scenario with `memlab run --scenario ./scenarios/{scenario-name}`
 
 Currently implemented scenarios:
 
-* [stackblitz-list-toggle](`./scenarios/stackblitz-list-toggle.js`)
+* [stackblitz-list-toggle.js](`./scenarios/stackblitz-list-toggle.js`)

@@ -14,4 +14,6 @@ const back = async page => {
     await page.click('#toggle-list');
 };
 
-module.exports = { url, action, back, setup };
+module.exports = {
+    url, action, back, setup
+};
